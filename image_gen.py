@@ -8,7 +8,6 @@ class ImageGen:
         pass
 
     def get_grid(self, scale=5, steps=500, offset_x=0, offset_y=0):
-        step_size = (scale * 2) / steps
         start_x = -scale + offset_x
         end_x = scale + offset_x
 
