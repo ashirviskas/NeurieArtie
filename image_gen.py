@@ -26,7 +26,7 @@ class ImageGen:
         img = Image.fromarray(img_arr)
         return img
 
-    def generate_image(self, nn, scale=5, steps=500, offset_x=0, offset_y=0):
+    def generate_image(self, nn, scale=5, steps=500, offset_x=0, offset_y=0, batch_size=200000):
         grid = self.get_grid(scale=scale, steps=steps, offset_x=offset_x, offset_y=offset_y)
         result = nn(grid)
         img = self.get_image(result, steps)
